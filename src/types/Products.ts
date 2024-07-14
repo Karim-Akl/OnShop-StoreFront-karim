@@ -1,0 +1,42 @@
+import { Brand } from "@framework/types";
+import { Category } from "./Categories";
+import { Media } from "./Common/Media";
+
+export interface Product {
+    id: number;
+    shop_brand_id: number;
+    name: string;
+    slug: string;
+    sku: string;
+    barcode: string;
+    description: string;
+    qty: number;
+    security_stock: number;
+    featured: boolean;
+    is_visible: boolean;
+    old_price: number;
+    price: number;
+    cost: number;
+    type: string;
+    backorder: boolean;
+    requires_shipping: boolean;
+    published_at: string;
+    seo_title: string | null;
+    seo_description: string | null;
+    weight_value: number;
+    weight_unit: string;
+    height_value: number;
+    height_unit: string;
+    width_value: number;
+    width_unit: string;
+    depth_value: number;
+    depth_unit: string;
+    volume_value: number;
+    volume_unit: string;
+    created_at: string;
+    updated_at: string;
+    categories?: Category[];
+    brand?: Brand;
+    media?: Media[];
+    [key: string]: any;
+}
